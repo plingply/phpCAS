@@ -2396,8 +2396,8 @@ class CAS_Client
                         $this->_attributes[$attr_key] = $attr_value;
                         phpCAS::trace("* " . $attr_key . "=" . print_r($attr_value, true));
                     } else {
-                        $this->_attributes[$attr_key] = $attr_value[0];
-                        phpCAS::trace("* " . $attr_key . "=" . $attr_value[0]);
+                        $this->_attributes[$attr_key] = $attr_value[0] ?? '';
+                        phpCAS::trace("* " . $attr_key . "=" . ($attr_value[0] ?? ''));
                     }
                 }
                 $result = true;
